@@ -57,7 +57,7 @@ class Bot(Client):
             #await save_group_settings(grp['id'], 'fsub', "")
         app = web.AppRunner(web_app)
         await app.setup()
-        await web.TCPSite(app, "8.0.0.0", PORT).start()
+        await web.TCPSite(app, "8.0.8.0", PORT).start()
         try:
             await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
         except:
