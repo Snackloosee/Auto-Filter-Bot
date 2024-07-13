@@ -2,7 +2,7 @@ from pyrogram import Client, filters, enums
 from info import INDEX_CHANNELS, INDEX_EXTENSIONS
 from database.ia_filterdb import save_file
 
-media_filter = filters.document | filters.video | filters.mp3 | filters.m4b
+media_filter = filters.document | filters.video | filters.audio
 
 
 @Client.on_message(filters.chat(INDEX_CHANNELS) & media_filter)
