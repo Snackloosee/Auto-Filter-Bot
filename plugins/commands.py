@@ -49,7 +49,8 @@ async def start(client, message):
     
     if (len(message.command) != 2) or (len(message.command) == 2 and message.command[1] == 'start'):
         buttons = [[
-            InlineKeyboardButton('EbookGuy', url=UPDATES_LINK)
+            InlineKeyboardButton('EbookGuy', url=UPDATES_LINK),
+            InlineKeyboardButton('📚 ᴀʙᴏᴜᴛ', callback_data='about')
             # InlineKeyboardButton("+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
   #      ],[
   #          InlineKeyboardButton('ℹ️ ᴜᴘᴅᴀᴛᴇs', url=UPDATES_LINK),
