@@ -24,7 +24,7 @@ async def is_user_banned(bot, message):
     ]]
     reply_markup=InlineKeyboardMarkup(buttons)
     ban = await db.get_ban_status(message.from_user.id)
-    await message.reply(f'Sorry {message.from_user.mention},\nMy owner you are banned to use me! If you want to know more about it contact support group.\nReason - <code>{ban["ban_reason"]}</code>',
+    await message.reply(f'Sorry {message.from_user.mention},\nYou are banned to use me! If you want to know more about it contact support group.\nReason - <code>{ban["ban_reason"]}</code>',
                         reply_markup=reply_markup)
 
 @Client.on_message(filters.group & disabled_group & filters.incoming)
